@@ -1,0 +1,12 @@
+CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus(P IN NUMBER,D IN VARCHAR2) IS
+BEGIN
+	UPDATE EmployeeBank SET SALARY=SALARY+(P/100*SALARY) WHERE DNAME=D;
+	COMMIT;
+	DBMS_OUTPUT.PUT_LINE('Salary of department '||D||' updated successfully');
+EXCEPTION
+	WHEN OTHERS THEN
+		ROLLBACK;
+		DBMS_OUTPUT.PUT_LINE('Error while updating');
+END;
+/
+		
