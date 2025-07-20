@@ -1,0 +1,17 @@
+CLEAR SCREEN
+SET SERVEROUTPUT ON
+DECLARE
+	CUST_ID NUMBER;
+	AGE NUMBER;
+	RATE NUMBER;
+CURSOR CUST_CUR IS
+	SELECT cId,interest,age,isVIP from BankLoanCust;
+BEGIN
+	FOR REC IN CUST_CUR LOOP
+		IF rec.age>60 THEN
+			UPDATE BankLoanCust SET interest=interest-1 WHERE cId=rec.cId;
+		END IF;
+	END LOOP;
+	COMMIT;
+END;
+/
