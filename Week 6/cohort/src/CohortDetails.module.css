@@ -1,0 +1,22 @@
+* {
+  margin: 10px;
+}
+
+.box {
+  width: 300px;
+  display: inline-block;
+  padding: 10px 10px 20px 20px;
+  border: 1px solid black;
+}
+
+dt {
+  font-weight: 500;
+}
+
+.statusOutgoing {
+  color: green;
+}
+
+.statusOther {
+  color: blue;
+}
