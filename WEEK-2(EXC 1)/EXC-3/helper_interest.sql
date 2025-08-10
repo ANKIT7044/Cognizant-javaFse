@@ -1,0 +1,6 @@
+CLEAR SCREEN
+SET SERVEROUTPUT ON
+BEGIN
+	ProcessMonthlyInterest;
+END;
+/

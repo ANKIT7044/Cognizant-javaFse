@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-*.log
-log/
-=======
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
@@ -35,4 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
->>>>>>> bd2415014c89937772e12ce059383aa30b223dd7
